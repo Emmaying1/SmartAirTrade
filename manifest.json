@@ -1,0 +1,17 @@
+{
+  "name": "SmartAirTrade",
+  "short_name": "SmartAirTrade",
+  "description": "Advanced Cryptocurrency Trading Platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230ea5e9'><path d='M6 15h12l-12 -12h12l-6 15l-6 -15h6'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}

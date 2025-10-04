@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartAirTrade - Advanced Crypto Trading Platform</title>
+    <meta name="description" content="Professional cryptocurrency trading platform with AI-powered analysis">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="SmartAirTrade.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230ea5e9'><path d='M6 15h12l-12 -12h12l-6 15l-6 -15h6'/></svg>">
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- Loading Screen -->
+    <div id="loading" class="fixed inset-0 bg-slate-900 flex items-center justify-center z-50">
+        <div class="text-center">
+            <div class="w-16 h-16 border-4 border-sky-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <h2 class="text-2xl font-bold text-white mb-2">SmartAirTrade</h2>
+            <p class="text-slate-400">Loading advanced trading platform...</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "react": "https://esm.sh/react@18.2.0",
+            "react-dom/client": "https://esm.sh/react-dom@18.2.0/client"
+        }
+    }
+    </script>
+    
+    <script type="text/babel" data-type="module" src="app.js"></script>
+    
+    <script>
+        // Hide loading screen when app loads
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const loading = document.getElementById('loading');
+                if (loading) {
+                    loading.style.opacity = '0';
+                    setTimeout(() => loading.remove(), 300);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
